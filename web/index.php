@@ -23,7 +23,7 @@ $app->get('/', function() use($app) {
 });
 
 //FONDOS
-$app->get('/fondos/tes', function() use($app) {
+$app->get('/fondos/test', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/test.twig');
 });

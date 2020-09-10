@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    background: rgb(188,202,255);
+    background: linear-gradient(90deg, rgba(188,202,255,1) 0%, rgba(238,141,255,1) 50%, rgba(255,71,150,1) 100%);
+    color: #333;
+  font: 100% Arial, Sans Serif;
+    width: 1280px !important;
+    height: 720px !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+  -webkit-animation: animateCloud 35s linear infinite;
+  -moz-animation: animateCloud 35s linear infinite;
+  animation: animateCloud 35s linear infinite;
+  
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.x2 {
+  -webkit-animation: animateCloud 20s linear infinite;
+  -moz-animation: animateCloud 20s linear infinite;
+  animation: animateCloud 20s linear infinite;
+  
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.x3 {
+  -webkit-animation: animateCloud 30s linear infinite;
+  -moz-animation: animateCloud 30s linear infinite;
+  animation: animateCloud 30s linear infinite;
+  
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.x4 {
+  -webkit-animation: animateCloud 18s linear infinite;
+  -moz-animation: animateCloud 18s linear infinite;
+  animation: animateCloud 18s linear infinite;
+  
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.x5 {
+  -webkit-animation: animateCloud 25s linear infinite;
+  -moz-animation: animateCloud 25s linear infinite;
+  animation: animateCloud 25s linear infinite;
+  
+  -webkit-transform: scale(0.55);
+  -moz-transform: scale(0.55);
+  transform: scale(0.55);
+}
+
+/* OBJECTS */
+.background-wrap {
+    width: 1280px !important;
+    height: 720px !important;
+    position: relative;
+}
+
+.cloud {
+  background: #fff;
+  background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+  background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+  background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+  background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+  background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+  
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  
+  -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+  height: 120px;
+  position: relative;
+  width: 350px;
+}
+
+.cloud:after, .cloud:before {
+    background: #fff;
+  content: '';
+  position: absolute;
+  z-indeX: -1;
+}
+
+.cloud:after {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+
+  height: 100px;
+  left: 50px;
+  top: -50px;
+  width: 100px;
+}
+
+.cloud:before {
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+
+  width: 180px;
+  height: 180px;
+  right: 50px;
+  top: -90px;
+}
+
+.cat {
+    width: 136px;
+    position: absolute;
+    top: -23px;
+    z-index: 2;
+    background-repeat: no-repeat;
+}
+
+.cat-2 {
+    width: 191px;
+    position: absolute;
+    left: 79px;
+    top: -70px;
+    z-index: 2;
+    background-repeat: no-repeat;
+}
+
+.cat-3 {
+    width: 259px;
+    position: absolute;
+    top: -147px;
+    left: 48px;
+    z-index: 2;
+    background-repeat: no-repeat;
+}
+    </style>
+</head>
+<body>
+    <div class="background-wrap">
+        <div class="x1">
+            <div class="cloud"></div>
+            <img class="cat" src="./images/cat.webp" alt="">
+        </div>
+    
+        <div class="x2">
+            <div class="cloud"></div>
+        </div>
+    
+        <div class="x3">
+            <div class="cloud"></div>
+            <img class="cat-2" src="./images/cat-2.webp" alt="">>
+        </div>
+    
+        <div class="x4">
+            <div class="cloud"></div>
+            <img class="cat-3" src="./images/cat-3.webp" alt="">
+        </div>
+    
+        <div class="x5">
+            <div class="cloud"></div>
+        </div>
+</body>
+</html>
