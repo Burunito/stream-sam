@@ -21,25 +21,40 @@ $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('index.twig');
 });
-$app->get('/barra', function() use($app) {
+
+//FONDOS
+$app->get('/fondos/tes', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('barra.twig');
+  return $app['twig']->render('fondos/test.twig');
 });
-$app->get('/contenido', function() use($app) {
+
+$app->get('/fondos/mundo-jack', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('contenido.twig');
+  return $app['twig']->render('fondos/mundo-jack.twig');
 });
-$app->get('/test', function() use($app) {
+
+
+//barras
+$app->get('/barras/redes-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('test.twig');
+  return $app['twig']->render('barras/redes-rosa-kawai.twig');
 });
-$app->get('/tops', function() use($app) {
+
+//TOPS
+$app->get('/tops/tops-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('tops.twig');
+  return $app['twig']->render('tops/tops-rosa-kawai.twig');
 });
-$app->get('/webcam', function() use($app) {
+
+
+//MARCOS
+$app->get('/marcos/webcam-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('webcam.twig');
+  return $app['twig']->render('marcos/webcam-rosa-kawai.twig');
+});
+$app->get('/marcos/contenido-rosa-kawai', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-rosa-kawai.twig');
 });
 
 $app->run();
