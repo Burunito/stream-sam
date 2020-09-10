@@ -57,8 +57,6 @@ $app->get('/marcos/contenido-rosa-kawai', function() use($app) {
   return $app['twig']->render('marcos/contenido-rosa-kawai.twig');
 });
 
-$img_url = array(
-    'url' => __DIR__.'/images'
-);
-$app['twig']->addGlobal("img_url", $img_url);
+$twig = new Twig_Environment($loader);
+$twig->addGlobal('img_url', $img_url);
 $app->run();
