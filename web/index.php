@@ -4,7 +4,6 @@ require('../vendor/autoload.php');
 
 $app = new Silex\Application();
 $app['debug'] = true;
-$img_url = __DIR__.'/images';
 
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
@@ -57,6 +56,4 @@ $app->get('/marcos/contenido-rosa-kawai', function() use($app) {
   return $app['twig']->render('marcos/contenido-rosa-kawai.twig');
 });
 
-$twig = new Twig_Environment($loader);
-$twig->addGlobal('img_url', $img_url);
 $app->run();
