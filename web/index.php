@@ -38,6 +38,10 @@ $app->get('/barras/redes-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-rosa-kawai.twig');
 });
+$app->get('/barras/redes-morado-halloween', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-morado-halloween.twig');
+});
 
 //TOPS
 $app->get('/tops/tops-rosa-kawai', function() use($app) {
