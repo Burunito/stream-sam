@@ -67,5 +67,21 @@ $app->get('/marcos/contenido-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-rosa-kawai.twig');
 });
+$app->get('/marcos/webcam-morado-spiderweb', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/webcam-morado-spiderweb.twig');
+});
+$app->get('/marcos/contenido-morado-spiderweb', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-morado-spiderweb.twig');
+});
+$app->get('/marcos/webcam-morado-halloween', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/webcam-morado-halloween.twig');
+});
+$app->get('/marcos/contenido-morado-halloween', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-morado-halloween.twig');
+});
 
 $app->run();
