@@ -32,6 +32,10 @@ $app->get('/fondos/mundo-jack', function() use($app) {
   return $app['twig']->render('fondos/mundo-jack.twig');
 });
 
+$app->get('/fondos/spider-web', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/spider-web.twig');
+});
 
 //barras
 $app->get('/barras/redes-rosa-kawai', function() use($app) {

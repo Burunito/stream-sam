@@ -65,106 +65,110 @@
   -moz-transform: scale(0.5);
   transform: scale(0.5);
 }
+
+.x3 {
+  -webkit-animation: animateCloud 10s linear infinite;
+  -moz-animation: animateCloud 10s linear infinite;
+  animation: animateCloud 10s linear infinite;
+  animation-iteration-count : infinite;
+  animation-direction       : alternate;
+  animation-fill-mode: backwards;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.x4 {
+  -webkit-animation: animateCloud 10s linear infinite;
+  -moz-animation: animateCloud 10s linear infinite;
+  animation: animateCloud 10s linear infinite;
+  animation-iteration-count : infinite;
+  animation-direction       : alternate;
+  animation-fill-mode: backwards;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.x5 {
+  -webkit-animation: animateCloud 10s linear infinite;
+  -moz-animation: animateCloud 10s linear infinite;
+  animation: animateCloud 10s linear infinite;
+  animation-iteration-count : infinite;
+  animation-direction       : alternate;
+  animation-fill-mode: backwards;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
 /* OBJECTS */
 .background-wrap {
     width: 1280px !important;
     height: 720px !important;
     position: absolute;
-    background-image: url('../../images/fondo-halloween1.jpg');
+    background-image: url('../../images/fondospider.jpg');
 }
 
 .bat {
-    max-height: 200px;
+    max-height: 90px;
     position: absolute;
     bottom: -500px;
     transform: rotateY(180deg);
-}
-
-.batv {
-    max-height: 200px;
-    position: absolute;
-    bottom: -500px;
 }
 
 .bat2 {
-    min-height: 400px;
+    max-height: 140px;
     position: absolute;
     bottom: -600px;
     transform: rotateY(180deg);
 }
 
-.bat2v {
-    min-height: 400px;
+.bat3 {
+    max-height: 140px;
     position: absolute;
-    bottom: -600px;
+    bottom: -300px;
+    left: 150px;
+    transform: rotateY(180deg);
 }
 
-.bat3 {
-    min-height: 100px;;
+.bat4 {
+    max-height: 140px;
     position: absolute;
-    bottom: 100px;
+    bottom: -800px;
+    right: 150px;
+    transform: rotateY(180deg);
+}
+
+.bat5 {
+    max-height: 140px;
+    position: absolute;
+    bottom: -950px;
+    left: 300px;
+    transform: rotateY(180deg);
 }
     </style>
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-var pos_x1 = 0, pos_x2 = 0, pos_x1_dir = true, pos_x2_dir = true;
-$(document).ready(function() {
-  var vampiro1 = $('#bat1');
-  var vampiro2 = $('#bat2');
-  setInterval(function(){ 
-  if(pos_x1_dir){
-    if(vampiro1.offset().left > pos_x1)
-      pos_x1 = vampiro1.offset().left;
-    if(pos_x1 > 1350){
-      pos_x1_dir = false;
-      vampiro1.removeClass('bat');
-      vampiro1.addClass("batv");
-    }
-  }
-  else{
-    if(vampiro1.offset().left < pos_x1)
-      pos_x1 = vampiro1.offset().left;
-    if(pos_x1 < -300){
-      pos_x1_dir = true;
-      vampiro1.addClass('bat');
-      vampiro1.removeClass("batv");
-    } 
-  }
-
-  if(pos_x2_dir){
-    if(vampiro2.offset().left > pos_x2)
-      pos_x2 = vampiro2.offset().left;
-    if(pos_x2 > 1350){
-      pos_x2_dir = false;
-      vampiro2.removeClass('bat2');
-      vampiro2.addClass("bat2v");
-    }
-  }
-  else{
-    if(vampiro2.offset().left < pos_x2)
-      pos_x2 = vampiro2.offset().left;
-    if(pos_x2 < -300){
-      pos_x2_dir = true;
-      vampiro2.addClass('bat2');
-      vampiro2.removeClass("bat2v");
-    } 
-  }
-  });
-});
-</script>
 <body>
     <div class="background-wrap">
         <div class="x1">
-            <img id="bat1" class="bat" src="../../images/murcielago2.gif" alt="">
+            <img id="bat1" class="bat" src="../../images/caritaspider1.png" alt="">
         </div>
     
         <div class="x2">
-            <img id="bat2" class="bat2" src="../../images/murcielago2.gif" alt="">
+            <img id="bat2" class="bat2" src="../../images/caritaspider2.png" alt="">
         </div>
-    
+
         <div class="x3">
-            <img id="bat3" class="bat3" src="../../images/murcielago2.gif" alt="">
+            <img id="bat3" class="bat3" src="../../images/caritaspider2.png" alt="">
+        </div>
+
+        <div class="x4">
+            <img id="bat4" class="bat4" src="../../images/caritaspider1.png" alt="">
+        </div>
+
+        <div class="x5">
+            <img id="bat5" class="bat5" src="../../images/caritaspider2.png" alt="">
         </div>
     </div>
 </body>
