@@ -56,7 +56,10 @@ $app->get('/tops/tops-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('tops/tops-rosa-kawai.twig');
 });
-
+$app->get('/tops/tops-morado-spider', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-morado-spider.twig');
+});
 
 //MARCOS
 $app->get('/marcos/webcam-rosa-kawai', function() use($app) {
