@@ -5,171 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-/* KEYFRAMES */
-@-webkit-keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-        margin-top: -100px;
-    }
-    100% {
-        margin-left: 120%;
-        margin-top: 10%;
-        rotate(180deg)
-    }
-}
-
-@-moz-keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-        margin-top: -100px;
-    }
-    100% {
-        margin-left: 120%;
-        margin-top: 10%;
-        rotate(180deg);
-    }
-}
-
-@keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-        margin-top: -100px;
-    }
-    100% {
-        margin-left: 120%;
-        margin-top: 10%;
-        rotate(180deg);
-    }
-}
-/* ANIMATIONS */
-
-.x1 {
-  -webkit-animation: animateCloud 5s linear infinite;
-  -moz-animation: animateCloud 5s linear infinite;
-  animation: animateCloud 5s linear infinite;
-  animation-iteration-count : infinite;
-  animation-direction       : alternate-reverse;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  transform: scale(0.9);
-}
-
-.x2 {
-  -webkit-animation: animateCloud 10s linear infinite;
-  -moz-animation: animateCloud 10s linear infinite;
-  animation: animateCloud 10s linear infinite;
-  animation-iteration-count : infinite;
-  animation-direction       : alternate;
-  animation-fill-mode: backwards;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5);
-}
-
-.x3 {
-  -webkit-animation: animateCloud 10s linear infinite;
-  -moz-animation: animateCloud 10s linear infinite;
-  animation: animateCloud 10s linear infinite;
-  animation-iteration-count : infinite;
-  animation-direction       : alternate;
-  animation-fill-mode: backwards;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5);
-}
-
-.x4 {
-  -webkit-animation: animateCloud 10s linear infinite;
-  -moz-animation: animateCloud 10s linear infinite;
-  animation: animateCloud 10s linear infinite;
-  animation-iteration-count : infinite;
-  animation-direction       : alternate;
-  animation-fill-mode: backwards;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5);
-}
-
-.x5 {
-  -webkit-animation: animateCloud 10s linear infinite;
-  -moz-animation: animateCloud 10s linear infinite;
-  animation: animateCloud 10s linear infinite;
-  animation-iteration-count : infinite;
-  animation-direction       : alternate;
-  animation-fill-mode: backwards;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5);
-}
 /* OBJECTS */
-.background-wrap {
+.background-wrap-1 {
     width: 1280px !important;
     height: 720px !important;
     position: absolute;
-    background-image: url('../../images/fondospider.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../images/naruto1.jpg');
 }
 
-.bat {
-    max-height: 90px;
+.background-wrap-2 {
+    width: 1280px !important;
+    height: 720px !important;
     position: absolute;
-    bottom: -500px;
-    transform: rotateY(180deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../images/naruto2.jpg');
 }
 
-.bat2 {
-    max-height: 140px;
+.background-wrap-3 {
+    width: 1280px !important;
+    height: 720px !important;
     position: absolute;
-    bottom: -600px;
-    transform: rotateY(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../images/naruto3.jpg');
 }
 
-.bat3 {
-    max-height: 140px;
-    position: absolute;
-    bottom: -300px;
-    left: 150px;
-    transform: rotateY(180deg);
+.shuriken {
+  position: absolute;
+  width: 100px;
+  z-index: 1;
 }
 
-.bat4 {
-    max-height: 140px;
-    position: absolute;
-    bottom: -800px;
-    right: 150px;
-    transform: rotateY(180deg);
+#s1 {
+  left: -200px;
+  top: 100px;
 }
 
-.bat5 {
-    max-height: 140px;
-    position: absolute;
-    bottom: -950px;
-    left: 300px;
-    transform: rotateY(180deg);
+#s2 {
+  left: -200px;
+  top: 500px;
+}
+
+#s3 {
+  left: 1300px;
+  top: 300px;
+}
+
+#s4 {
+  left: 1300px;
+  top: 560px;
 }
     </style>
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="../../js/funciones.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  /*
+  var positions = [
+    {pos:{left:100,top:100}, speed:1000},
+    {pos:{left:300,top:500}, speed:1000},
+    {pos:{left:500,top:100}, speed:1000},
+    {pos:{left:800,top:900}, speed:1000},
+    {pos:{left:1000,top:500}, speed:1000},
+    {pos:{left:1300,top:0}, speed:1000},
+    {pos:{left:-200,top:100}, speed:1000}
+  ]; 
+  */
+  //S1
+  var object = $('#s1');
+  var positions = [
+    {pos:{left:-200,top:100}, speed:1000},
+    {pos:{left:1300,top:100}, speed:1000}
+  ];
+  var speed = positions.reduce(function(sum, current) {
+    return sum + current.speed;
+  }, 0); 
+
+  setInterval(function(){
+    moverPosiciones(object, positions, speed);
+  }, speed + 1000);
+  moverPosiciones(object, positions);
+  
+  //S2
+  var object2 = $('#s2');
+  var positions2 = [
+    {pos:{left:-200,top:500}, speed:1500},
+    {pos:{left:1300,top:500}, speed:900}
+  ];
+  var speed2 = positions2.reduce(function(sum, current) {
+    return sum + current.speed;
+  }, 0); 
+
+  setInterval(function(){
+    moverPosiciones(object2, positions2, speed2);
+  }, speed2 + 1000);
+  moverPosiciones(object2, positions2);
+  //S3
+  var object3 = $('#s3');
+  var positions3 = [
+    {pos:{left:1300,top:300}, speed:1600},
+    {pos:{left:-200,top:300}, speed:1100}
+  ];
+  var speed3 = positions3.reduce(function(sum, current) {
+    return sum + current.speed;
+  }, 0); 
+
+  setInterval(function(){
+    moverPosiciones(object3, positions3, speed3);
+  }, speed3 + 1000);
+  moverPosiciones(object3, positions3);
+
+  //S4
+  var object4 = $('#s4');
+  var positions4 = [
+    {pos:{left:1300,top:560}, speed:700},
+    {pos:{left:-200,top:560}, speed:1300}
+  ];
+  var speed4 = positions4.reduce(function(sum, current) {
+    return sum + current.speed;
+  }, 0); 
+
+  setInterval(function(){
+    moverPosiciones(object4, positions4, speed4);
+  }, speed4 + 1000);
+  moverPosiciones(object4, positions4);
+  //Rotacion shurikens
+  var rotation = 0;
+  setInterval(function(){
+    rotation+=15;
+    $('.shuriken').css({'transform' : 'rotate('+ rotation +'deg)'});
+  }, 30);
+
+
+  var background = 1;
+  setInterval(function(){
+    $('.background').fadeOut(500);
+    $('.background-wrap-'+background).fadeIn(500);
+    background++;
+    if(background==4)
+      background = 1;
+  }, 10000);
+});
+
+
+</script>
 <body>
-    <div class="background-wrap">
-        <div class="x1">
-            <img id="bat1" class="bat" src="../../images/caritaspider1.png" alt="">
-        </div>
-    
-        <div class="x2">
-            <img id="bat2" class="bat2" src="../../images/caritaspider2.png" alt="">
-        </div>
+    <div>
+      <img src="../../images/naruto5.png" class="shuriken" id="s1">
+    </div>
+    <div>
+      <img src="../../images/naruto6.png" class="shuriken" id="s2">
+    </div>
+    <div>
+      <img src="../../images/naruto4.png" class="shuriken" id="s3">
+    </div>
+    <div>
+      <img src="../../images/naruto4.png" class="shuriken" id="s4">
+    </div>
+    <div class="background background-wrap-1">
+        
+    </div>
 
-        <div class="x3">
-            <img id="bat3" class="bat3" src="../../images/caritaspider2.png" alt="">
-        </div>
+    <div class="background background-wrap-2">
+        
+    </div>
 
-        <div class="x4">
-            <img id="bat4" class="bat4" src="../../images/caritaspider1.png" alt="">
-        </div>
-
-        <div class="x5">
-            <img id="bat5" class="bat5" src="../../images/caritaspider2.png" alt="">
-        </div>
+    <div class="background background-wrap-3">
+        
     </div>
 </body>
 </html>
