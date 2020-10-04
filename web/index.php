@@ -26,27 +26,42 @@ $app->get('/fondos/test', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/test.twig');
 });
-
 $app->get('/fondos/mundo-jack', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/mundo-jack.twig');
 });
-
+$app->get('/fondos/mundo-jack2', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/mundo-jack2.twig');
+});
+$app->get('/fondos/illuminatti', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/illuminatti.twig');
+});
+$app->get('/fondos/plaquetachan', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/plaquetachan.twig');
+});
+$app->get('/fondos/saitama', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/saitama.twig');
+});
+$app->get('/fondos/crikosos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/crikosos.twig');
+});
 $app->get('/fondos/spider-web', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/spider-web.twig');
 });
-
 $app->get('/fondos/cotorrisa', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/cotorrisa.twig');
 });
-
 $app->get('/fondos/evangelion', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/evangelion.twig');
 });
-
 $app->get('/fondos/naruto', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/naruto.twig');
@@ -64,7 +79,6 @@ $app->get('/barras/redes-morado-spiderweb', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-morado-spiderweb.twig');
 });
-
 $app->get('/barras/redes-cotorrisa', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-cotorrisa.twig');
@@ -76,6 +90,26 @@ $app->get('/barras/redes-naruto', function() use($app) {
 $app->get('/barras/redes-evangelion', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-evangelion.twig');
+});
+$app->get('/barras/redes-saitama', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-saitama.twig');
+});
+$app->get('/barras/redes-plaquetachan', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/plaquetachan.twig');
+});
+$app->get('/barras/redes-illuminatti', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-illuminatti.twig');
+});
+$app->get('/barras/redes-crikosos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-crikosos.twig');
+});
+$app->get('/barras/redes-mundo-jack2', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-mundo-jack2.twig');
 });
 //TOPS
 $app->get('/tops/tops-rosa-kawai', function() use($app) {
@@ -97,6 +131,27 @@ $app->get('/tops/tops-naruto', function() use($app) {
 $app->get('/tops/tops-evangelion', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('tops/tops-evangelion.twig');
+});
+
+$app->get('/tops/tops-mundo-jack2', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-mundo-jack2.twig');
+});
+$app->get('/tops/tops-saitama', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-saitama.twig');
+});
+$app->get('/tops/tops-plaquetachan', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-plaquetachan.twig');
+});
+$app->get('/tops/tops-illuminatti', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-illuminatti.twig');
+});
+$app->get('/tops/tops-crikosos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-crikosos.twig');
 });
 //MARCOS
 $app->get('/marcos/webcam-rosa-kawai', function() use($app) {
@@ -123,7 +178,6 @@ $app->get('/marcos/contenido-morado-halloween', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-morado-halloween.twig');
 });
-
 $app->get('/marcos/contenido-cotorrisa', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-cotorrisa.twig');
@@ -135,5 +189,26 @@ $app->get('/marcos/contenido-naruto', function() use($app) {
 $app->get('/marcos/contenido-evangelion', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-evangelion.twig');
+});
+
+$app->get('/marcos/contenido-mundo-jack2', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-mundo-jack2.twig');
+});
+$app->get('/marcos/contenido-plaquetachan', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-plaquetachan.twig');
+});
+$app->get('/marcos/contenido-crikosos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-crikosos.twig');
+});
+$app->get('/marcos/contenido-illuminatti', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-illuminatti.twig');
+});
+$app->get('/marcos/contenido-saitama', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-saitama.twig');
 });
 $app->run();
