@@ -97,7 +97,7 @@ $app->get('/barras/redes-saitama', function() use($app) {
 });
 $app->get('/barras/redes-plaquetachan', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('barras/plaquetachan.twig');
+  return $app['twig']->render('barras/redes-plaquetachan.twig');
 });
 $app->get('/barras/redes-illuminatti', function() use($app) {
   $app['monolog']->addDebug('logging output.');
