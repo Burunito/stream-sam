@@ -122,22 +122,14 @@ $(document).ready(function() {
 
   }, 1500);
   
-  var background = 1;
-  setInterval(function(){
-    $('.background').fadeOut(500);
-    $('.background-wrap-'+background).fadeIn(500);
-    background++;
-    if(background==4)
-      background = 1;
-  }, 10000);
 });
 </script>
 <body>
-    <div class="background background-wrap-1">
+    <div>
+      <img src="../../images/mundojack9.gif" class="neblina">
     </div>
-    <div class="background background-wrap-2">
-    </div>
-    <div class="background background-wrap-3">
+    <div>
+      <img src="../../images/mundojack8.gif" class="perrito-derecha" id="s1">
     </div>
 </body>
 </html>

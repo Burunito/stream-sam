@@ -111,6 +111,11 @@ $app->get('/barras/redes-mundo-jack2', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-mundo-jack2.twig');
 });
+$app->get('/barras/redes-mundo-jack2-perrito', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-mundo-jack2-perrito.twig');
+});
+
 //TOPS
 $app->get('/tops/tops-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
