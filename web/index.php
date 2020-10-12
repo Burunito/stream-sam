@@ -34,6 +34,10 @@ $app->get('/fondos/mundo-jack2', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/mundo-jack2.twig');
 });
+$app->get('/fondos/mundo-jack2-perrito', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/mundo-jack2-perrito.twig');
+});
 $app->get('/fondos/illuminatti', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/illuminatti.twig');
@@ -110,10 +114,6 @@ $app->get('/barras/redes-crikosos', function() use($app) {
 $app->get('/barras/redes-mundo-jack2', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-mundo-jack2.twig');
-});
-$app->get('/barras/redes-mundo-jack2-perrito', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('barras/redes-mundo-jack2-perrito.twig');
 });
 
 //TOPS
