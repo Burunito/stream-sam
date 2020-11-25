@@ -70,6 +70,18 @@ $app->get('/fondos/naruto', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/naruto.twig');
 });
+$app->get('/fondos/cisneros', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/cisneros.twig');
+});
+$app->get('/fondos/coneja', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/coneja.twig');
+});
+$app->get('/fondos/arkantos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/arkantos.twig');
+});
 //barras
 $app->get('/barras/redes-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
@@ -115,6 +127,18 @@ $app->get('/barras/redes-mundo-jack2', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-mundo-jack2.twig');
 });
+$app->get('/barras/redes-cisneros', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-cisneros.twig');
+});
+$app->get('/barras/redes-arkantos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-arkantos.twig');
+});
+$app->get('/barras/redes-coneja', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-coneja.twig');
+});
 
 //TOPS
 $app->get('/tops/tops-rosa-kawai', function() use($app) {
@@ -157,6 +181,18 @@ $app->get('/tops/tops-illuminatti', function() use($app) {
 $app->get('/tops/tops-crikosos', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('tops/tops-crikosos.twig');
+});
+$app->get('/tops/tops-arkantos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-arkantos.twig');
+});
+$app->get('/tops/tops-cisneros', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-cisneros.twig');
+});
+$app->get('/tops/tops-coneja', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-coneja.twig');
 });
 //MARCOS
 $app->get('/marcos/webcam-rosa-kawai', function() use($app) {
