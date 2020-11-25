@@ -74,6 +74,10 @@ $app->get('/fondos/cisneros', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/cisneros.twig');
 });
+$app->get('/fondos/cisneros-webcam', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/cisneros-webcam.twig');
+});
 $app->get('/fondos/coneja', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/coneja.twig');
