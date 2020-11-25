@@ -34,10 +34,6 @@ $app->get('/fondos/mundo-jack2', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/mundo-jack2.twig');
 });
-$app->get('/fondos/mundo-jack2-perrito', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('fondos/mundo-jack2-perrito.twig');
-});
 $app->get('/fondos/illuminatti', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/illuminatti.twig');
@@ -268,5 +264,19 @@ $app->get('/marcos/contenido-coneja', function() use($app) {
 $app->get('/marcos/contenido-cisneros-webcam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-cisneros-webcam.twig');
+});
+//Objeto moviles
+
+$app->get('/fondos/mundo-jack2-perrito', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/mundo-jack2-perrito.twig');
+});
+$app->get('/fondos/mangudai', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/mangudai.twig');
+});
+$app->get('/fondos/paladin', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/paladin.twig');
 });
 $app->run();
