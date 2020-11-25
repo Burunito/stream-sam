@@ -74,10 +74,6 @@ $app->get('/fondos/cisneros', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/cisneros.twig');
 });
-$app->get('/fondos/cisneros-webcam', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('fondos/cisneros-webcam.twig');
-});
 $app->get('/fondos/coneja', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/coneja.twig');
@@ -255,5 +251,22 @@ $app->get('/marcos/contenido-illuminatti', function() use($app) {
 $app->get('/marcos/contenido-saitama', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-saitama.twig');
+});
+
+$app->get('/marcos/contenido-arkantos', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-arkantos.twig');
+});
+$app->get('/marcos/contenido-cisneros', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-cisneros.twig');
+});
+$app->get('/marcos/contenido-coneja', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-coneja.twig');
+});
+$app->get('/marcos/contenido-cisneros-webcam', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-cisneros-webcam.twig');
 });
 $app->run();
