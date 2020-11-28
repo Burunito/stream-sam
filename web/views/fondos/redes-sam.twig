@@ -10,21 +10,29 @@
     <script src="https://kit.fontawesome.com/c33fca4056.js" crossorigin="anonymous"></script>
     <style>
 /* OBJECTS */
+body {
+      background-color: #eb44ad;
+}
 .background-wrap-1 {
-    width: 1280px !important;
-    height: 720px !important;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #14151E;
+    background-color: #eb44ad;
     background-image: url('../../images/fondosam.png');
 }
 
 a {
   font-size: 20px;
   font-family: 'Merienda One';
-  width: 300px;
-  height: 100px;
+  width: 100% !important;
+}
+.perfil {
+  max-width: 100%;
+  max-height: 300px;
+  display: flex;
+  position: relative;
 }
     </style>
 </head>
@@ -33,47 +41,74 @@ a {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="../../js/funciones.js"></script>
 <script type="text/javascript">
-
+  $( document ).ready(function() {
+      $('#sam2').hide();
+  });
+  var test = 0;
+  setInterval(function(){
+    if(test==0){
+      $('#sam1').hide();
+      $('#sam2').show();
+    }
+    else{
+      $('#sam2').hide();
+      $('#sam1').show();
+    }
+    test++;
+    if(test==3)
+      test=0;
+  }, 2000);
 </script>
 <body>
   <div class="background background-wrap-1">
-     <div class="container p-5">
+  </div>
+     <div class="container pt-5">
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-12 col-md-8">
+            <a href="https://www.facebook.com/gaming/unaelfaadictaalcafe/" class="btn btn-success">Una elfa adicta al café</a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div>
+            <img src="../../images/sam1.png" id="sam1" class="perfil rounded-circle">
+            <img src="../../images/sam2.jpg" id="sam2" class="perfil rounded-circle">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
             <a href="https://www.facebook.com/gaming/unaelfaadictaalcafe/" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-12 col-md-8">
             <a href="https://twitter.com/Sam42425002" class="btn btn-primary"><i class="fab fa-twitter"></i> Twitter</a>
           </div>
         </div>        
         <div class="row justify-content-center">
-          <div class="col-4 ">
+          <div class="col-12 col-md-8">
             <a href="https://www.youtube.com/channel/UCbXrd-TH56zcF3qZ_dIBOdA" class="btn btn-primary"><i class="fab fa-youtube"></i> Youtube</a>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4 ">
+          <div class="col-12 col-md-8">
             <a href="https://www.instagram.com/una.elfa.adicta.al.cafe/" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4 ">
+          <div class="col-12 col-md-8">
             <a href="https://www.twitch.tv/unaelfaadictaalcafe" class="btn btn-primary"><i class="fab fa-twitch"></i> Twitch</a>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4 ">
+          <div class="col-12 col-md-8">
             <a href="https://www.patreon.com/unaelfaadictaalcafe" class="btn btn-primary"><i class="fab fa-patreon"></i> Patreon</a>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4 ">
+          <div class="col-12 col-md-8">
             <a href="https://www.tiktok.com/@zombiecaramelizado?lang=es" class="btn btn-primary"><i class="fab fa-tiktok"></i> TikTokk</a>
           </div>
         </div>
       </div>
-  </div>
 </body>
 </html>
