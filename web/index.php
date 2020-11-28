@@ -295,4 +295,10 @@ $app->get('/fondos/balas', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/balas.twig');
 });
+
+
+$app->get('/links/redes-sam', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/redes-sam.twig');
+});
 $app->run();
