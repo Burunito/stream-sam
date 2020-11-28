@@ -74,6 +74,14 @@ $app->get('/fondos/coneja', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/coneja.twig');
 });
+$app->get('/fondos/coneja-starting', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/coneja-starting.twig');
+});
+$app->get('/fondos/coneja-ending', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/coneja-ending.twig');
+});
 $app->get('/fondos/arkantos', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/arkantos.twig');
@@ -264,6 +272,10 @@ $app->get('/marcos/contenido-coneja', function() use($app) {
 $app->get('/marcos/contenido-cisneros-webcam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-cisneros-webcam.twig');
+});
+$app->get('/marcos/contenido-coneja-webcam', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-coneja-webcam.twig');
 });
 //Objeto moviles
 

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c33fca4056.js" crossorigin="anonymous"></script>
 <style>
 font-family: 'Merienda One', cursive;
 
 body {
     font-family: 'Merienda One';
-    width: 1200px !important;
+    max-width: 1200px !important;
     height: 60px !important;
 }
 
@@ -25,21 +25,32 @@ p {
     font-family: 'Merienda One';
     font-size: 26px;
     display: inline;
-    color: white;
+    color: #79fdff;
 }
 
-i {
+svg {
     font-size: 22px !important;
-    color: white;
+    color: #79fdff;
 }
 
 .background-wrap {
-    background-color: #f684a9; 
+    background-color: #f684a9;
     width: 1200px !important;
     height: 60px !important;
     display: flex;
     position: absolute;
-    top: 212px;
+    top: 176px;
+    background-image: url(../../images/codwz-pared.jpg);
+    /*
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+}
+
+.background-items {
+    width: 1200px !important;
+    position: absolute;
 }
 
 .row {
@@ -53,35 +64,76 @@ i {
     width: 150px;
 }
 
-.neblina {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.4;
-  width: 100%;
-  height: 100%;
+.ram {
+    z-index: 1;
+    width: 69px;
+    position: relative;
+    top: 35px;
+    left: 94%;
+}
+
+.test {
+    width: 100%;
+}
+
+.soldado1 {
+    z-index: 1;
+    position: absolute;
+    width: 66px;
+    top: 175px;
+}
+.soldado2 {
+    z-index: 1;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    top: 138px;
+}
+.soldado3 {
+    z-index: 1;
+    position: absolute;
+    width: 83px;
+    left: 75%;
+    top: 138px;
+}
+.soldado4 {
+    z-index: 1;
+    position: absolute;
+    width: 150px;
+    left: 89%;
+    top: 120px;
+}
+.soldado5 {
+    z-index: 1;
+    position: absolute;
+    width: 150px;
 }
 </style>
 </head>
 <body>
-    <div>
-        <img src="../../images/aldeano.png" class="monita">
+    <div class="background-items">
+        <img src="../../images/codwz1.png" class="soldado1">
+        <img src="../../images/codwz5.png" class="soldado2">
+        <img src="../../images/codwz3.png" class="soldado3">
+        <img src="../../images/codwz4.png" class="soldado4">
+        <img src="../../images/codwz2.png" class="soldado5">
     </div>
     <div class="background-wrap">
         <div class="row">
             <i class="fa fa-instagram"></i>
-            <p>una.elfa.adicta.al.cafe</p>
+            <p>oscar.urbina</p>
         </div>
         <div class="row">
-            <i class="fa fa-youtube"></i>
-            <p>Una Elfa Adicta Al Café</p>
+            <i class="fab fa-tiktok"></i>
+            <p>ninjasux8291</p>
         </div>
         <div class="row">
-            <i class="fa fa-twitter"></i>
-            <p>Sam42425002</p>
+            <i class="fa fa-twitch"></i>
+            <p>ninjaasux</p>
         </div>
         <div class="row">
             <i class="fa fa-facebook"></i>
-            <p>unaelfaadictaalcafe</p>
+            <p>Ninjasux</p>
         </div>
     </div>    
 </body>
