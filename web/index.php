@@ -291,4 +291,8 @@ $app->get('/fondos/paladin', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/paladin.twig');
 });
+$app->get('/fondos/balas', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/balas.twig');
+});
 $app->run();
