@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="../../webfonts/PermanentMarker-Regular.ttf">
+    <link href="../../webfonts/smileandwave.ttf">
+    <link href="../../webfonts/UrbanJungleDEMO.otf">
+    <link href="../../webfonts/Distortion Dos Analogue.otf">
     <title>Document</title>
     <style>
 /* OBJECTS */
+@font-face {
+  font-family: Urban Jungle;
+  src: url(../../webfonts/UrbanJungleDEMO.otf);
+}
+
+@font-face {
+  font-family: Permanent;
+  src: url(../../webfonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: Smile and Wave;
+  src: url(../../webfonts/smileandwave.ttf);
+}
+
+div {
+  font-family: Urban Jungle;
+}
+
 .background-wrap-1 {
     width: 1280px !important;
     height: 720px !important;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('../../images/codwz-bg2.jpg');
-}
-
-.background-wrap-2 {
-    width: 1280px !important;
-    height: 720px !important;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('../../images/codwz-bg3.jpg');
-}
-
-.background-wrap-3 {
-    width: 1280px !important;
-    height: 720px !important;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('../../images/codwz-bg4.jpg');
+    background-image: url('../../images/fondo-negro.png');
 }
 
 .perrito {
@@ -72,7 +77,7 @@
 }
 
 p {
-  font-family: 'Piedra';
+  font-family: 'Smile and Wave';
   font-size: 158px;
   color: #8125dc;
 }
@@ -196,7 +201,7 @@ $(document).ready(function() {
     }
 
   }, 1500);
-  
+  /*
   var background = 1;
   setInterval(function(){
     $('.background').fadeOut(500);
@@ -205,17 +210,12 @@ $(document).ready(function() {
     if(background==4)
       background = 1;
   }, 10000);
+  */
 });
 </script>
 <body>
     <div class="texto">
-      <p class="animate-flicker">Iniciando el stream</p>
-    </div>
-    <div class="background background-wrap-1">
-    </div>
-    <div class="background background-wrap-2">
-    </div>
-    <div class="background background-wrap-3">
+      <p class="animate-flicker">Terminando el stream</p>
     </div>
 </body>
 </html>
