@@ -13,25 +13,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #14151E;
-    background-image: url('../../images/codwz-bg2.jpg');
-}
-
-.background-wrap-2 {
-    width: 1280px !important;
-    height: 720px !important;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('../../images/codwz-bg3.jpg');
-}
-
-.background-wrap-3 {
-    width: 1280px !important;
-    height: 720px !important;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('../../images/codwz-bg4.jpg');
+    background-image: url('../../images/fondo-negro2.jpg');
 }
 
 .perrito {
@@ -121,23 +103,10 @@ $(document).ready(function() {
     }
 
   }, 1500);
-  
-  var background = 1;
-  setInterval(function(){
-    $('.background').fadeOut(500);
-    $('.background-wrap-'+background).fadeIn(500);
-    background++;
-    if(background==4)
-      background = 1;
-  }, 10000);
 });
 </script>
 <body>
     <div class="background background-wrap-1">
-    </div>
-    <div class="background background-wrap-2">
-    </div>
-    <div class="background background-wrap-3">
     </div>
 </body>
 </html>
