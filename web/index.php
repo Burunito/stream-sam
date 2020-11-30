@@ -301,4 +301,8 @@ $app->get('/links/redes-sam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/redes-sam.twig');
 });
+$app->get('/alertas/stream-sam', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('alertas/stream-sam.twig');
+});
 $app->run();
