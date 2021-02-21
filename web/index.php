@@ -295,7 +295,7 @@ $app->get('/marcos/contenido-babyyoda', function() use($app) {
   return $app['twig']->render('marcos/contenido-babyyoda.twig');
 });
 
-$app->get('/marcos/ontenido-babyyoda-webcam', function() use($app) {
+$app->get('/marcos/contenido-babyyoda-webcam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-babyyoda-webcam.twig');
 });
