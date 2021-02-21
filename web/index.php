@@ -86,6 +86,10 @@ $app->get('/fondos/arkantos', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/arkantos.twig');
 });
+$app->get('/fondos/babyyoda', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/babyyoda.twig');
+});
 //barras
 $app->get('/barras/redes-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
@@ -143,7 +147,10 @@ $app->get('/barras/redes-coneja', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('barras/redes-coneja.twig');
 });
-
+$app->get('/barras/redes-babyyoda', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('barras/redes-babyyoda.twig');
+});
 //TOPS
 $app->get('/tops/tops-rosa-kawai', function() use($app) {
   $app['monolog']->addDebug('logging output.');
@@ -197,6 +204,11 @@ $app->get('/tops/tops-cisneros', function() use($app) {
 $app->get('/tops/tops-coneja', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('tops/tops-coneja.twig');
+});
+
+$app->get('/tops/tops-babyyoda', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tops/tops-babyyoda.twig');
 });
 //MARCOS
 $app->get('/marcos/webcam-rosa-kawai', function() use($app) {
@@ -277,6 +289,16 @@ $app->get('/marcos/contenido-coneja-webcam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-coneja-webcam.twig');
 });
+
+$app->get('/marcos/contenido-babyyoda', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-babyyoda-webcam.twig');
+});
+
+$app->get('/marcos/contenido-chat', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('marcos/contenido-babyyoda-webcam.twig');
+});
 //Objeto moviles
 
 $app->get('/fondos/mundo-jack2-perrito', function() use($app) {
@@ -295,8 +317,10 @@ $app->get('/fondos/balas', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/balas.twig');
 });
-
-
+$app->get('/fondos/babyyoda-baby', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/babyyoda-baby.twig');
+});
 $app->get('/links/redes-sam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('fondos/redes-sam.twig');
