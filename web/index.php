@@ -292,10 +292,10 @@ $app->get('/marcos/contenido-coneja-webcam', function() use($app) {
 
 $app->get('/marcos/contenido-babyyoda', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('marcos/contenido-babyyoda-webcam.twig');
+  return $app['twig']->render('marcos/contenido-babyyoda.twig');
 });
 
-$app->get('/marcos/contenido-chat', function() use($app) {
+$app->get('/marcos/ontenido-babyyoda-webcam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('marcos/contenido-babyyoda-webcam.twig');
 });
