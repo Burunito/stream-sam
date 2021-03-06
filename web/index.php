@@ -329,4 +329,23 @@ $app->get('/alertas/stream-sam', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('alertas/stream-sam.twig');
 });
+
+//NASAWEBINAR
+$app->get('/fondos/nasa-1', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/nasa-1.twig');
+});
+$app->get('/fondos/nasa-2', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/nasa-2.twig');
+});
+$app->get('/fondos/meteorito', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/meteorito.twig');
+});
+$app->get('/fondos/estacion', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('fondos/estacion.twig');
+});
+
 $app->run();
